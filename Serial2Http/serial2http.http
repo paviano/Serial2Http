@@ -1,0 +1,64 @@
+@host = http://localhost:1234
+@port = COM7
+@baud = 9600
+
+### Ping
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "{{port}}",
+  "baudRate": {{baud}},
+  "data": "PING\r\n"
+}
+
+### Status
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "{{port}}",
+  "baudRate": {{baud}},
+  "data": "STATUS\r\n"
+}
+
+### Version
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "{{port}}",
+  "baudRate": {{baud}},
+  "data": "VERSION\r\n"
+}
+
+### Reset
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "{{port}}",
+  "baudRate": {{baud}},
+  "data": "RESET\r\n"
+}
+
+### Comando custom con timeout esteso
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "{{port}}",
+  "baudRate": {{baud}},
+  "data": "STATUS\r\n",
+  "timeoutMs": 5000
+}
+
+### Porta inesistente (test errore)
+POST {{host}}/send
+Content-Type: application/json
+
+{
+  "port": "COM99",
+  "baudRate": 9600,
+  "data": "PING\r\n"
+}
