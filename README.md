@@ -6,9 +6,6 @@ HTTP wrapper for serial ports. Receives a POST, writes to the serial port, retur
 
 ```bash
 dotnet run --project Serial2Http
-
-# custom port
-dotnet run --project Serial2Http --urls http://0.0.0.0:8080
 ```
 
 Default: `http://0.0.0.0:1234`
