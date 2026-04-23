@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "SimulationRunning",
+    "Projects": [
+      {
+        "Path": "Serial2Http\\Serial2Http.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "SerialFakeDevice\\SerialFakeDevice.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

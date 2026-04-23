@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Serial2Http/Serial2Http.csproj" />
+  <Project Path="SerialFakeDevice/SerialFakeDevice.csproj" />
+</Solution>

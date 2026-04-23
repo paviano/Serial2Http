@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Serial2Http": {
+      "commandName": "Project",
+      "applicationUrl": "http://0.0.0.0:1234"
+    }
+  }
+}
