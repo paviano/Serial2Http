@@ -42,7 +42,7 @@ Content-Type: application/json
   "data": "RESET\r\n"
 }
 
-### Comando custom con timeout esteso
+### custom command with extended timeout
 POST {{host}}/send
 Content-Type: application/json
 
@@ -53,7 +53,7 @@ Content-Type: application/json
   "timeoutMs": 5000
 }
 
-### Porta inesistente (test errore)
+### test error
 POST {{host}}/send
 Content-Type: application/json
 
