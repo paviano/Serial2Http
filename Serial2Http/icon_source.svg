@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg_top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="100%" stop-color="#16305e"/>
+    </linearGradient>
+    <linearGradient id="bg_bot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="globe_fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <clipPath id="top_half">
+      <rect x="0" y="0" width="256" height="128"/>
+    </clipPath>
+    <clipPath id="bot_half">
+      <rect x="0" y="128" width="256" height="128"/>
+    </clipPath>
+    <clipPath id="rounded">
+      <rect width="256" height="256" rx="44"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <!-- Top half background -->
+    <rect x="0" y="0" width="256" height="128" fill="url(#bg_top)"/>
+    <!-- Bottom half background -->
+    <rect x="0" y="128" width="256" height="128" fill="url(#bg_bot)"/>
+
+    <!-- Thin divider line -->
+    <line x1="0" y1="128" x2="256" y2="128" stroke="#ffffff" stroke-width="1" opacity="0.12"/>
+
+    <!-- ── DB9 MINIMAL ── -->
+    <!-- Trapezoid shell, centered vertically in top half -->
+    <path d="M 52,52 L 204,52 L 212,96 L 44,96 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" opacity="0.9"/>
+
+    <!-- Top row: 5 dots -->
+    <circle cx="84"  cy="68" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="106" cy="68" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="128" cy="68" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="150" cy="68" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="172" cy="68" r="5.5" fill="#ffffff" opacity="0.85"/>
+
+    <!-- Bottom row: 4 dots (offset) -->
+    <circle cx="95"  cy="83" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="117" cy="83" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="139" cy="83" r="5.5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="161" cy="83" r="5.5" fill="#ffffff" opacity="0.85"/>
+
+    <!-- ── GLOBE ── -->
+    <!-- Globe circle fills bottom half with padding -->
+    <circle cx="128" cy="192" r="68" fill="url(#globe_fill)" clip-path="url(#bot_half)"/>
+    <circle cx="128" cy="192" r="68" fill="none" stroke="#90caf9" stroke-width="2" opacity="0.6" clip-path="url(#bot_half)"/>
+
+    <!-- Equator -->
+    <line x1="60" y1="192" x2="196" y2="192" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+    <!-- Upper latitude -->
+    <path d="M 63,169 Q 128,160 193,169" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.3"/>
+    <!-- Lower latitude -->
+    <path d="M 63,215 Q 128,224 193,215" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.3"/>
+    <!-- Central meridian -->
+    <ellipse cx="128" cy="192" rx="24" ry="68" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.35" clip-path="url(#bot_half)"/>
+    <!-- Side meridians -->
+    <ellipse cx="128" cy="192" rx="50" ry="68" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.18" clip-path="url(#bot_half)"/>
+
+    <!-- ── ARROW (overlay, center) ── -->
+    <!-- Thin shaft -->
+    <rect x="124" y="108" width="8" height="36" rx="4" fill="#ffffff" opacity="0.95"/>
+    <!-- Arrowhead -->
+    <polygon points="112,140  128,160  144,140" fill="#ffffff" opacity="0.95"/>
+    <!-- Small cap on top -->
+    <circle cx="128" cy="110" r="4" fill="#ffffff" opacity="0.95"/>
+  </g>
+</svg>
